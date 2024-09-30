@@ -1,0 +1,227 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               strip [86963]
+Path:                  /Users/USER/Library/Developer/Xcode/DerivedData/cctools-ecihfcsnwddndhafbgntrrwrjzti/Build/Products/Debug/strip
+Identifier:            strip
+Version:               ???
+Code Type:             ARM-64 (Native)
+Parent Process:        zsh [77528]
+Responsible:           iTerm2 [1785]
+User ID:               501
+
+Date/Time:             2023-10-12 16:47:41.8244 +0200
+OS Version:            macOS 13.6 (22G120)
+Report Version:        12
+Anonymous UUID:        F22C0F06-0F16-E475-C0CB-264A0FF4F6A3
+
+Sleep/Wake UUID:       231EDA49-965B-462F-B819-4068587485EA
+
+Time Awake Since Boot: 160000 seconds
+Time Since Wake:       32896 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x00000002fd865d7c
+Exception Codes:       0x0000000000000001, 0x00000002fd865d7c
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [86963]
+
+VM Region Info: 0x2fd865d7c is not in any region.  Bytes after previous region: 2835570045  Bytes before following region: 54802358916
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      unused __TEXT               25482c000-254830000    [   16K] r--/r-- SM=COW  ...ed lib __TEXT
+--->  GAP OF 0xd6b7d0000 BYTES
+      commpage (reserved)         fc0000000-1000000000   [  1.0G] ---/--- SM=NUL  ...(unallocated)
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   strip                         	       0x102967bd0 strip_symtab + 16332 (strip.c:4334)
+1   strip                         	       0x10295fee0 strip_object + 4080 (strip.c:1421)
+2   strip                         	       0x10295ed8c strip_arch + 3296 (strip.c:1047)
+3   strip                         	       0x10295dc70 strip_file + 268 (strip.c:746)
+4   strip                         	       0x10295d6fc main + 3404 (strip.c:670)
+5   dyld                          	       0x180bfbf28 start + 2236
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000001   x1: 0x0000000148110001   x2: 0x0000000000000018   x3: 0xffffffffffffff88
+    x4: 0x000000000000005f   x5: 0x00000000000000d7   x6: 0x0000000000000001   x7: 0x0000000000000bd0
+    x8: 0x0000000000002252   x9: 0x0000000158008000  x10: 0x000000006961775f  x11: 0x0000000000031a88
+   x12: 0x0000000000000018  x13: 0x0000000000006360  x14: 0x0000000102a4ec78  x15: 0x0000000000000000
+   x16: 0x0000000180f7fb30  x17: 0x00000001e0b03eb8  x18: 0x0000000000000000  x19: 0x000000010295c9b0
+   x20: 0x00000001029c4000  x21: 0x00000001029c5910  x22: 0x000000016d4a30d0  x23: 0x0000000180c763c6
+   x24: 0x000000016d4a3050  x25: 0x0000000000000001  x26: 0x0000000000000000  x27: 0x0000000000000000
+   x28: 0x0000000000000000   fp: 0x000000016d4a2750   lr: 0x6e4b000102967adc
+    sp: 0x000000016d4a2530   pc: 0x0000000102967bd0 cpsr: 0x60001000
+   far: 0x00000002fd865d7c  esr: 0x92000046 (Data Abort) byte write Translation fault
+
+Binary Images:
+       0x10295c000 -        0x1029abfff strip (*) <8c1ad0f9-0260-3651-a493-86eaa10b50b0> /Users/USER/Library/Developer/Xcode/DerivedData/cctools-ecihfcsnwddndhafbgntrrwrjzti/Build/Products/Debug/strip
+       0x180bf6000 -        0x180c84587 dyld (*) <49204446-242b-3d1e-9704-32f8ac99723e> /usr/lib/dyld
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 29
+    thread_create: 0
+    thread_set_state: 236
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=807.8M resident=0K(0%) swapped_out_or_unallocated=807.8M(100%)
+Writable regions: Total=786.4M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=786.4M(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Kernel Alloc Once                   32K        1 
+MALLOC                           154.2M       14 
+MALLOC guard page                   96K        5 
+MALLOC_MEDIUM (reserved)         240.0M        2         reserved VM address space (unallocated)
+MALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)
+STACK GUARD                       56.0M        1 
+Stack                             8176K        1 
+__AUTH                              46K       11 
+__AUTH_CONST                        72K       38 
+__DATA                             193K       37 
+__DATA_CONST                       199K       40 
+__DATA_DIRTY                        78K       22 
+__LINKEDIT                       802.3M        2 
+__OBJC_RO                         66.4M        1 
+__OBJC_RW                         2012K        1 
+__TEXT                            5600K       42 
+dyld private memory                272K        2 
+mapped file                       12.2M        1 
+shared memory                       16K        1 
+===========                     =======  ======= 
+TOTAL                              1.7G      223 
+TOTAL, minus reserved VM space     1.1G      223 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"strip","timestamp":"2023-10-12 16:47:42.00 +0200","app_version":"","slice_uuid":"8c1ad0f9-0260-3651-a493-86eaa10b50b0","build_version":"","platform":1,"share_with_app_devs":1,"is_first_party":1,"bug_type":"309","os_version":"macOS 13.6 (22G120)","roots_installed":0,"incident_id":"DB17380A-FB8B-4C80-8089-0FC2724F5519","name":"strip"}
+{
+  "uptime" : 160000,
+  "procRole" : "Unspecified",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac14,12",
+  "coalitionID" : 959,
+  "osVersion" : {
+    "train" : "macOS 13.6",
+    "build" : "22G120",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-10-12 16:47:41.8244 +0200",
+  "incident" : "DB17380A-FB8B-4C80-8089-0FC2724F5519",
+  "pid" : 86963,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2023-10-12 16:47:41.7251 +0200",
+  "procStartAbsTime" : 3960627086216,
+  "procExitAbsTime" : 3960629463314,
+  "procName" : "strip",
+  "procPath" : "\/Users\/USER\/Library\/Developer\/Xcode\/DerivedData\/cctools-ecihfcsnwddndhafbgntrrwrjzti\/Build\/Products\/Debug\/strip",
+  "parentProc" : "zsh",
+  "parentPid" : 77528,
+  "coalitionName" : "com.googlecode.iterm2",
+  "crashReporterKey" : "F22C0F06-0F16-E475-C0CB-264A0FF4F6A3",
+  "responsiblePid" : 1785,
+  "responsibleProc" : "iTerm2",
+  "codeSigningID" : "strip-555549448c1ad0f902603651a49386eaa10b50b0",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570425861,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 0,
+  "wakeTime" : 32896,
+  "sleepWakeUUID" : "231EDA49-965B-462F-B819-4068587485EA",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x2fd865d7c is not in any region.  Bytes after previous region: 2835570045  Bytes before following region: 54802358916\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      unused __TEXT               25482c000-254830000    [   16K] r--\/r-- SM=COW  ...ed lib __TEXT\n--->  GAP OF 0xd6b7d0000 BYTES\n      commpage (reserved)         fc0000000-1000000000   [  1.0G] ---\/--- SM=NUL  ...(unallocated)",
+  "exception" : {"codes":"0x0000000000000001, 0x00000002fd865d7c","rawCodes":[1,12843375996],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x00000002fd865d7c"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":86963},
+  "vmregioninfo" : "0x2fd865d7c is not in any region.  Bytes after previous region: 2835570045  Bytes before following region: 54802358916\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      unused __TEXT               25482c000-254830000    [   16K] r--\/r-- SM=COW  ...ed lib __TEXT\n--->  GAP OF 0xd6b7d0000 BYTES\n      commpage (reserved)         fc0000000-1000000000   [  1.0G] ---\/--- SM=NUL  ...(unallocated)",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":236,"task_for_pid":29},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":3477797,"threadState":{"x":[{"value":1},{"value":5504040961},{"value":24},{"value":18446744073709551496},{"value":95},{"value":215},{"value":1},{"value":3024},{"value":8786},{"value":5771395072},{"value":1767995231},{"value":203400},{"value":24},{"value":25440},{"value":4339330168},{"value":0},{"value":6458702640,"symbolLocation":0,"symbol":"_platform_strcmp"},{"value":8064614072},{"value":0},{"sourceLine":407,"value":4338338224,"sourceFile":"strip.c","symbol":"main","symbolLocation":0},{"value":4338761728},{"value":4338768144},{"value":6128546000},{"value":6455518150},{"value":6128545872},{"value":1},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":7947445971763755740},"cpsr":{"value":1610616832},"fp":{"value":6128543568},"sp":{"value":6128543024},"esr":{"value":2449473606,"description":"(Data Abort) byte write Translation fault"},"pc":{"value":4338383824,"matchesCrashFrame":1},"far":{"value":12843375996}},"queue":"com.apple.main-thread","frames":[{"imageOffset":48080,"sourceLine":4334,"sourceFile":"strip.c","symbol":"strip_symtab","imageIndex":0,"symbolLocation":16332},{"imageOffset":16096,"sourceLine":1421,"sourceFile":"strip.c","symbol":"strip_object","imageIndex":0,"symbolLocation":4080},{"imageOffset":11660,"sourceLine":1047,"sourceFile":"strip.c","symbol":"strip_arch","imageIndex":0,"symbolLocation":3296},{"imageOffset":7280,"sourceLine":746,"sourceFile":"strip.c","symbol":"strip_file","imageIndex":0,"symbolLocation":268},{"imageOffset":5884,"sourceLine":670,"sourceFile":"strip.c","symbol":"main","imageIndex":0,"symbolLocation":3404},{"imageOffset":24360,"symbol":"start","symbolLocation":2236,"imageIndex":1}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4338335744,
+    "size" : 327680,
+    "uuid" : "8c1ad0f9-0260-3651-a493-86eaa10b50b0",
+    "path" : "\/Users\/USER\/Library\/Developer\/Xcode\/DerivedData\/cctools-ecihfcsnwddndhafbgntrrwrjzti\/Build\/Products\/Debug\/strip",
+    "name" : "strip"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6454992896,
+    "size" : 583048,
+    "uuid" : "49204446-242b-3d1e-9704-32f8ac99723e",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  }
+],
+  "sharedCache" : {
+  "base" : 6454329344,
+  "size" : 3553476608,
+  "uuid" : "c26be8cd-619e-3513-8673-3ff826317005"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=807.8M resident=0K(0%) swapped_out_or_unallocated=807.8M(100%)\nWritable regions: Total=786.4M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=786.4M(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nKernel Alloc Once                   32K        1 \nMALLOC                           154.2M       14 \nMALLOC guard page                   96K        5 \nMALLOC_MEDIUM (reserved)         240.0M        2         reserved VM address space (unallocated)\nMALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)\nSTACK GUARD                       56.0M        1 \nStack                             8176K        1 \n__AUTH                              46K       11 \n__AUTH_CONST                        72K       38 \n__DATA                             193K       37 \n__DATA_CONST                       199K       40 \n__DATA_DIRTY                        78K       22 \n__LINKEDIT                       802.3M        2 \n__OBJC_RO                         66.4M        1 \n__OBJC_RW                         2012K        1 \n__TEXT                            5600K       42 \ndyld private memory                272K        2 \nmapped file                       12.2M        1 \nshared memory                       16K        1 \n===========                     =======  ======= \nTOTAL                              1.7G      223 \nTOTAL, minus reserved VM space     1.1G      223 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "e244ac45ba14187a789b5cee536003d494cdd86c",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "6112d17137f5d11121dcd4e2",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000413
+    },
+    {
+      "rolloutId" : "60186475825c62000ccf5450",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000062
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "6dd670af-0633-45e4-ae5f-122ae4df02be",
+      "experimentId" : "64406ba83deb637ac8a04419",
+      "deploymentId" : 900000017
+    }
+  ]
+}
+}

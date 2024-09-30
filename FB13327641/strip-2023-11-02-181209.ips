@@ -1,0 +1,134 @@
+{"app_name":"strip","timestamp":"2023-11-02 18:12:09.00 +0100","app_version":"","slice_uuid":"75497adf-0c7b-3d6b-95bc-9a47a342979a","build_version":"","platform":1,"share_with_app_devs":1,"is_first_party":1,"bug_type":"309","os_version":"macOS 13.6.1 (22G313)","roots_installed":0,"incident_id":"E61FE6E6-F6D4-4871-BA84-4AD37708D1A9","name":"strip"}
+{
+  "uptime" : 29000,
+  "procRole" : "Unspecified",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac14,12",
+  "coalitionID" : 904,
+  "osVersion" : {
+    "train" : "macOS 13.6.1",
+    "build" : "22G313",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-11-02 18:12:08.8694 +0100",
+  "incident" : "E61FE6E6-F6D4-4871-BA84-4AD37708D1A9",
+  "pid" : 96493,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2023-11-02 18:12:08.7902 +0100",
+  "procStartAbsTime" : 713649548901,
+  "procExitAbsTime" : 713651443285,
+  "procName" : "strip",
+  "procPath" : "\/Applications\/Xcode_15.1.0-beta2.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/strip",
+  "parentProc" : "Exited process",
+  "parentPid" : 96492,
+  "coalitionName" : "com.googlecode.iterm2",
+  "crashReporterKey" : "F22C0F06-0F16-E475-C0CB-264A0FF4F6A3",
+  "responsiblePid" : 1747,
+  "responsibleProc" : "iTerm2",
+  "codeSigningID" : "com.apple.strip",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570442241,
+  "codeSigningValidationCategory" : 1,
+  "codeSigningTrustLevel" : 0,
+  "wakeTime" : 19462,
+  "sleepWakeUUID" : "1025C1AA-54EE-4429-8136-4E63B557CBF0",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x1929ec35f is not in any region.  Bytes after previous region: 632521568  Bytes before following region: 315178145\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      Stack                       16c6b8000-16ceb4000    [ 8176K] rw-\/rwx SM=PRV  thread 0\n--->  GAP OF 0x387cc000 BYTES\n      unused __TEXT               1a5680000-1a56dc000    [  368K] r-x\/r-x SM=COW  ...ed lib __TEXT",
+  "exception" : {"codes":"0x0000000000000001, 0x00000001929ec35f","rawCodes":[1,6754845535],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x00000001929ec35f"},
+  "termination" : {"flags":1024,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":96493},
+  "vmregioninfo" : "0x1929ec35f is not in any region.  Bytes after previous region: 632521568  Bytes before following region: 315178145\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      Stack                       16c6b8000-16ceb4000    [ 8176K] rw-\/rwx SM=PRV  thread 0\n--->  GAP OF 0x387cc000 BYTES\n      unused __TEXT               1a5680000-1a56dc000    [  368K] r-x\/r-x SM=COW  ...ed lib __TEXT",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":677417,"threadState":{"x":[{"value":6754845535},{"value":6603130207},{"value":24},{"value":4344605120,"symbolLocation":0,"symbol":"cmp_qsort_undef_map_64"},{"value":26},{"value":18},{"value":0},{"value":144},{"value":4834951168},{"value":1768179039},{"value":1},{"value":2},{"value":4834099200},{"value":12},{"value":12},{"value":2147614715},{"value":7074396976,"symbolLocation":0,"symbol":"_platform_strcmp"},{"value":8680326120},{"value":0},{"value":4344605120,"symbolLocation":0,"symbol":"cmp_qsort_undef_map_64"},{"value":24},{"value":4835672064},{"value":134104},{"value":6},{"value":3},{"value":4835875464},{"value":4835722896},{"value":4835773776},{"value":4835697480}],"flavor":"ARM_THREAD_STATE64","lr":{"value":7072922292},"cpsr":{"value":4096},"fp":{"value":6122317296},"sp":{"value":6122317136},"esr":{"value":2449473542,"description":"(Data Abort) byte read Translation fault"},"pc":{"value":7074396984,"matchesCrashFrame":1},"far":{"value":6754845535}},"queue":"com.apple.main-thread","frames":[{"imageOffset":2872,"symbol":"_platform_strcmp","symbolLocation":8,"imageIndex":2},{"imageOffset":182964,"symbol":"_qsort","symbolLocation":224,"imageIndex":3},{"imageOffset":37888,"symbol":"strip_object","symbolLocation":16068,"imageIndex":0},{"imageOffset":19748,"symbol":"strip_file","symbolLocation":740,"imageIndex":0},{"imageOffset":18692,"symbol":"main","symbolLocation":2240,"imageIndex":0},{"imageOffset":24360,"symbol":"start","symbolLocation":2236,"imageIndex":4}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4344561664,
+    "size" : 196608,
+    "uuid" : "75497adf-0c7b-3d6b-95bc-9a47a342979a",
+    "path" : "\/Applications\/Xcode_15.1.0-beta2.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/strip",
+    "name" : "strip"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4345298944,
+    "size" : 16384,
+    "uuid" : "81ada5ef-4379-3534-b47e-8666d29408f2",
+    "path" : "\/Applications\/Xcode_15.1.0-beta2.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/libcodedirectory.dylib",
+    "name" : "libcodedirectory.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 7074394112,
+    "size" : 28668,
+    "uuid" : "6d458354-3c39-3f35-a3bb-d01a78817b4a",
+    "path" : "\/usr\/lib\/system\/libsystem_platform.dylib",
+    "name" : "libsystem_platform.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 7072739328,
+    "size" : 520184,
+    "uuid" : "840fe68c-8175-347b-bfb1-3b6bce431935",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 7070687232,
+    "size" : 583048,
+    "uuid" : "49204446-242b-3d1e-9704-32f8ac99723e",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  }
+],
+  "sharedCache" : {
+  "base" : 7070023680,
+  "size" : 3553509376,
+  "uuid" : "531c0369-32b5-3499-ad7a-31d86a6e6b93"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=807.7M resident=0K(0%) swapped_out_or_unallocated=807.7M(100%)\nWritable regions: Total=657.5M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=657.5M(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nKernel Alloc Once                   32K        1 \nMALLOC                           145.2M       12 \nMALLOC guard page                   96K        5 \nMALLOC_MEDIUM (reserved)         120.0M        1         reserved VM address space (unallocated)\nMALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)\nSTACK GUARD                       56.0M        1 \nStack                             8176K        1 \n__AUTH                              46K       11 \n__AUTH_CONST                        72K       38 \n__DATA                             209K       39 \n__DATA_CONST                       215K       41 \n__DATA_DIRTY                        78K       22 \n__LINKEDIT                       802.3M        3 \n__OBJC_RO                         66.4M        1 \n__OBJC_RW                         2012K        1 \n__TEXT                            5488K       43 \ndyld private memory                272K        1 \nmapped file                       12.2M        1 \nshared memory                       16K        1 \n===========                     =======  ======= \nTOTAL                              1.6G      224 \nTOTAL, minus reserved VM space     1.1G      224 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "8740ab3db60d2fe099e40e48c020f9e54ae6567a",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "60da5e84ab0ca017dace9abf",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000008
+    },
+    {
+      "rolloutId" : "6425c75e4327780c10cc4252",
+      "factorPackIds" : {
+        "SIRI_HOME_AUTOMATION_INTENT_SELECTION_CACHE" : "642600a457e7664b1698eb32"
+      },
+      "deploymentId" : 240000004
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}
