@@ -34,6 +34,7 @@ Execute this:
 
 and you get a crash:
 
+```
 (lldb) bt
 * thread #1, queue = 'com.apple.main-thread', stop reason = EXC_BAD_ACCESS (code=1, address=0x0)
     frame #0: 0x000000018041bf3c CoreFoundation`CF_IS_OBJC + 20
@@ -60,5 +61,5 @@ and you get a crash:
     frame #21: 0x0000000102fb5ff8 iosapitest`main(argc=1, argv=0x000000016ce49b00) at main.m:17:12
     frame #22: 0x000000010300d410 dyld_sim`start_sim + 20
     frame #23: 0x00000001030f6154 dyld`start + 2476
-
+```
     
