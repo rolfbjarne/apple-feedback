@@ -44,5 +44,3 @@ Crashes like this:
         frame #12: 0x000000010418eb98 dyld`start + 6076
 
 Note: I have only tried in the simulator, not on an actual device.
-
-Fi
